@@ -11,13 +11,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./public/style.css">
 
     <title>Ohmyfood</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <img src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
     </header>
-    
+    <main>        
+        <section class="map">
+            <i class="fa-solid fa-location-dot map_icon"> 
+            </i>
+            <form method="post" action="traitement.php">
+                <input class="map_city" type="search" placeholder="Paris, Belleville"/>
+            </form>
+        </section>
+        <section class="menu">
+            <h2 class="menu_title"></h2>
+            <p class="menu_subtitle">Réservez le menu qui vous convient</p>
+            <a class="menu_btn">Découvrez des restaurants d'exceptions, sélectionnés par nos soins</a>
+        </section>
+    </main>
 </body>
 </html>
