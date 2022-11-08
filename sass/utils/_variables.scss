@@ -1,3 +1,10 @@
-$colour-primary: #9356DC;
-$colour-secondary: #FF79DA;
-$colour-tertiary: #99E2D0;
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiary: #99e2d0;
+$color-grey: rgb(53,53,53);
+$color-grey2: lighten($color-grey, 65%);
+$color-grey3: lighten($color-grey, 75%);
+
+$radius:(
+    btn: 10rem,
+);
