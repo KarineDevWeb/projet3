@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/087f159f86.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./public/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./public/style.css">
 
     <title>Ohmyfood</title>
 </head>
+
 <body>
     <header class="header">
         <img src="./images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
     </header>
-    <main>        
+    <main>
         <section class="map">
-            <i class="fa-solid fa-location-dot map_icon"> 
+            <i class="fa-solid fa-location-dot map_icon">
             </i>
             <form method="post" action="traitement.php">
-                <input class="map_city" type="search" placeholder="Paris, Belleville"/>
+                <input class="map_city" type="search" placeholder="Paris, Belleville" />
             </form>
         </section>
         <section class="menu">
@@ -32,6 +34,69 @@
             <p class="menu_subtitle">Découvrez des restaurants d'exceptions, sélectionnés par nos soins</p>
             <a href="#" class="btn">Explorer nos restaurants</a>
         </section>
+        <section class="functioning">
+            <h2>Fonctionnement</h2>
+            <ol>
+                <li>
+                    <p>
+                        <i class="fas fa-mobile-alt"></i>
+                        Choisissez un restaurant
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <i class="fa-solid fa-list"></i>
+                        Composez votre menu
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <i class="fa-sharp fa-solid fa-store"></i>
+                        Dégustez au restaurant
+                    </p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="restaurants" id="restaurants">
+            <div class="bloc">
+                <h2>Restaurants</h2>
+                <div class="cards">
+                    <a class="card" href="./la-palette-du-gout.html">
+                        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="card__img">
+                        <span class="card__new">Nouveau</span>
+                        <div class="card__body">
+                            <div class="card__name">
+                                <h3>La palette du goût</h3>
+                                <div class="card__subtitle">
+                                    <p>Ménilmontant</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+            </div>
+
+        </section>
+
     </main>
+    <footer class="footer">
+        <div class="bloc">
+            <span class="footer_logo">Ohmyfood</span>
+            <ul class="footer_list">
+                <li class="footer_listrestaurants">
+                    <a class="footer_link" href="#">
+                        <i class="">
+
+                        </i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
+
 </html>
