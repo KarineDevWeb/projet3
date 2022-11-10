@@ -1,0 +1,30 @@
+footer{
+    background-color: #353535;
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+    color:white;
+
+    & h1 {
+        font-family: Shrikhand, cursive;
+        font-size: 20px;
+        margin-top: 0;
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+    & ul {
+        list-style: none;
+        line-height: 1rem;
+    }
+    & i {
+        font-size: 1.2rem;
+        width: 1.2rem;
+        color:white;
+        padding-right: .3rem;
+        padding-left: 0.3rem;
+    }
+    & a {
+        color:white;
+        font-style: normal;
+        text-decoration: none;
+    }
+}

@@ -5,7 +5,7 @@ body, html {
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
 }
-
+// section réservez le menu
 .menu {
   padding: 32px;
   text-align: center;
@@ -17,7 +17,131 @@ body, html {
 
   &__subtitle {
     font-weight: 300;
-    margin: 1.5rem 0;
+    margin: 24px 0;
   }
 }
+// section Fonctionnement
+.functioning {
+    margin-left: 10px;
+    margin-right: 0;
+    margin-bottom: 32px;
+    & h2 {
+        padding-top: 20px;
+        padding-left: 32px;
+    }
+}
+ ol {
+        padding-left: 0;
+        list-style: none;
+        counter-reset: li;
+        white-space: nowrap;
+        & p {
+            display: inline-block;
+            margin: auto;
+            min-width: 80vw;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            margin-top: 19px;
+            margin-bottom: 19px;    
+            background-color: $color-grey3;
+            border-radius: 16px;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: map-get($radius, propal);
+            box-shadow: 8px 8px 10px $color-grey2, -1px -4px 4px $color-grey3;
+            
+            &:hover {
+                background-color: darken($color-grey3, 5%);
+                box-shadow: 8px 8px 6px $color-grey2, -1px -4px 2px $color-grey3;
+                & i {
+                    color: $color-primary;
+                }
+            }
+        }
+        & li {
+            counter-increment: li;
+            cursor: pointer;
+            min-width: 142px;
+        }
+        & i {
+            font-size: 19px;
+            padding-left: 30px;
+            padding-right: 20px;
+            color: $color-grey;
+        }
+        & li::before {
+            content: counter(li);
+            position: relative;
+            left: 16px;
+            color: white;
+            font-size: 19px;
+            padding: 3px 10px;
+            background-color: $color-primary;
+            border-radius: 50%;            
+        }
+    }
+  //section restaurants 
+  .restaurants {
+  background-color: #f6f6f6;
+  padding: ($appPadding + 1rem) $appPadding;
+}  
+
+  .bloc {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  }
+
+  .cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+  }
+
+  .card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  
+
+  &__img {
+    height: 180px;
+    width: 100%;
+    border: transparent solid 0px;
+    border-radius: 16px 16px 0 0;
+    box-shadow: none;
+    object-fit: cover;
+  }
+  &__new {
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 50%);
+    padding: 0.5rem;
+    border-radius: 0.125rem;
+    position: absolute;
+    top: 1rem;
+    right: 0.75rem;
+  }
+   &__body {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    flex: 1;
+  }
+   & h3 {
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+  & p {
+    margin: 0;
+  }
+  }
+
+
 
