@@ -4,7 +4,14 @@ $color-tertiary: #99e2d0;
 $color-grey: rgb(53,53,53);
 $color-grey2: lighten($color-grey, 65%);
 $color-grey3: lighten($color-grey, 75%);
-$appPadding: 1rem;
+$appPadding: 16px;
 $radius: (
-  btn: 10rem,
+  btn: 160px,
 );
+
+// media queries :
+$breakpoints: (
+  desktop: 992px,
+  tablet: 768px,
+);
+
