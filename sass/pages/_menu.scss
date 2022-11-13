@@ -1,3 +1,4 @@
+// flèche et logo ohmyfood
 .header {
 &--withBackArrow {
     position: relative;
@@ -5,22 +6,108 @@
 
   &__arrow {
     position: absolute;
-    left: 2rem;
-    height: 2rem;
-    width: 2rem;
+    left: 32px;
+    height: 32px;
+    width: 32px;
     top: 50%;
     display:flex;
     align-items:center;
     justify-content: flex-start;
     transform: translateY(-50%);
-    font-size: 1.2rem;
+    font-size: 19px;
     color: black;
   }
   }
-
+// image palette du goût
 .imgGood {
   max-width: 100%;
-  max-height: 32rem;
+  max-height: 512px;
   width: 100%;
   object-fit: cover;
 }
+// tout les menus
+.boxes {
+    &--meal{
+        & .meal{
+            margin-bottom:3rem;
+        }
+    }
+}
+// entrées soulignées
+.starters {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+
+& h5{
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 1.2rem;
+            font-weight: normal;
+        }
+        & .line{
+            margin-top: 2px;
+            margin-bottom: 32px;
+            width: 35px;
+            border-top: 3px solid $color-tertiary;
+        }
+    }
+// mise en page des différentes entrées, plats et desserts
+article {
+    background-color: $color-grey3;
+    width: 100%;
+    padding-top: 2px;
+    padding-bottom: 70px;
+
+    & .start {
+        width: 90%;
+        min-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+       
+        &__description {
+            cursor: pointer;
+            position: relative;
+            border-radius: 16px;
+            padding-top: 10px;
+            padding-bottom: 16px;
+            margin-bottom: 10px;
+            padding-left: 7px;
+            background-color: white;
+            font-size: 19px;
+            box-shadow: 2px 5px 5px $color-grey2, -2px 0 5px $color-grey2;
+            display: flex;
+            align-items: stretch;
+            overflow: hidden;
+            & h3 {
+                margin-top: 5px;
+                margin-bottom: 1px;
+                margin-left: 5px;
+                color:$color-grey;
+                font-weight: bold;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & .subtitle {
+                display: flex;
+                justify-content: space-between;
+                & p {
+                    margin-top: 1px;
+                    margin-bottom: 2px;
+                    margin-left: 5px;
+                    color:$color-grey;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                & span {
+                    padding-right: 16px;
+                    padding-left: 8px;
+                    font-weight: bold;
+                }
+            } 
+         }
+      }
+    }
