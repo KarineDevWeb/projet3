@@ -2,6 +2,7 @@
 
 body, html {
   margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
 }
@@ -22,19 +23,32 @@ body, html {
 }
 // section Fonctionnement
 .functioning {
+    max-width: 1300px;
+    position: relative;
     margin-left: 10px;
     margin-right: 0;
     margin-bottom: 32px;
     & h2 {
         padding-top: 20px;
         padding-left: 32px;
+        margin-top: 0;
+    }
+    @include desktop{
+        margin-left: 0;
+        margin-right: 0;    
     }
 }
+
  ol {
         padding-left: 0;
         list-style: none;
         counter-reset: li;
         white-space: nowrap;
+
+        @media (min-width: 992px){
+          display: flex;
+        }
+        
         & p {
             display: inline-block;
             margin: auto;
@@ -49,7 +63,9 @@ body, html {
             font-size: 16px;
             border-radius: map-get($radius, propal);
             box-shadow: 8px 8px 10px $color-grey2, -1px -4px 4px $color-grey3;
-            
+            @include desktop{
+                min-width: 320px;
+            }
             &:hover {
                 background-color: darken($color-grey3, 5%);
                 box-shadow: 8px 8px 6px $color-grey2, -1px -4px 2px $color-grey3;
@@ -83,7 +99,7 @@ body, html {
   //section restaurants 
   .restaurants {
   background-color: #f6f6f6;
-  padding: ($appPadding + 1rem) $appPadding;
+  padding: ($appPadding + 16px) $appPadding;
 }  
 
   .bloc {
@@ -97,11 +113,16 @@ body, html {
   grid-template-columns: repeat(1, 1fr);
   column-gap: 32px;
   row-gap: 32px;
+
+  @include desktop{
+            display:grid;
+            grid-template-columns: repeat(2,2fr);
+        }
   }
 
   .card {
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 16px;
   position: relative;
   text-decoration: none;
   color: inherit;
@@ -138,10 +159,24 @@ body, html {
     margin: 0;
     margin-bottom: 0.25rem;
   }
-  & p {
+  &__subtitle {
     margin: 0;
-  }
-  }
+ }
+ &__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  border: Opx solid transparent;
+  padding: 0;
+ }
+ &__like {
+  background-color: white;
+ }
+}
+
 
 
 
