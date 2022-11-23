@@ -1,11 +1,24 @@
 @use "sass:color";
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  width: 100%;
 }
+
+main {
+  padding: 0;
+}
+
+.bloc {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
 // section réservez le menu
 .menu {
   padding: 32px;
@@ -21,113 +34,175 @@ body, html {
     margin: 24px 0;
   }
 }
+
 // section Fonctionnement
+
 .functioning {
-    max-width: 1300px;
-    position: relative;
-    margin-left: 10px;
-    margin-right: 0;
-    margin-bottom: 32px;
-    & h2 {
-        padding-top: 20px;
-        padding-left: 32px;
-        margin-top: 0;
-    }
-    @include desktop{
-        margin-left: 0;
-        margin-right: 0;    
-    }
-}
+  counter-reset: steps;
+  // max-width: 1280px;
+  // position: relative;
+  // margin-left: 10px; 
+  // margin-right: 10px;
+  // margin-bottom: 32px;
+                        // padding: 32px 16px;
+                        // }
 
- ol {
-        padding-left: 0;
-        list-style: none;
-        counter-reset: li;
-        white-space: nowrap;
+// .bloc {
+//   width: 100%;
+//   margin: auto;
+// }
 
-        @media (min-width: 992px){
-          display: flex;
-        }
-        
-        & p {
-            display: inline-block;
-            margin: auto;
-            min-width: 80vw;
-            padding-top: 32px;
-            padding-bottom: 32px;
-            margin-top: 19px;
-            margin-bottom: 19px;    
-            background-color: $color-grey3;
-            border-radius: 16px;
-            font-weight: bold;
-            font-size: 16px;
-            border-radius: map-get($radius, propal);
-            box-shadow: 8px 8px 10px $color-grey2, -1px -4px 4px $color-grey3;
-            @include desktop{
-                min-width: 320px;
-            }
-            &:hover {
-                background-color: darken($color-grey3, 5%);
-                box-shadow: 8px 8px 6px $color-grey2, -1px -4px 2px $color-grey3;
-                & i {
-                    color: $color-primary;
-                }
-            }
-        }
-        & li {
-            counter-increment: li;
-            cursor: pointer;
-            min-width: 142px;
-        }
-        & i {
-            font-size: 19px;
-            padding-left: 30px;
-            padding-right: 20px;
-            color: $color-grey;
-        }
-        & li::before {
-            content: counter(li);
-            position: relative;
-            left: 16px;
-            color: white;
-            font-size: 19px;
-            padding: 3px 10px;
-            background-color: $color-primary;
-            border-radius: 50%;            
-        }
+                          // h2 {
+                          //   padding-top: 20px;
+  // padding-left: 32px;
+                          //   margin-top: 0;
+                          // }
+
+// @include tablet {
+//   margin-left: 0;
+//   margin-right: 0;
+// }
+//   @include desktop{
+//       margin-left: 0;
+//       margin-right: 0;    
+//   }
+
+
+& ol {
+  // margin: 0;
+  // padding: 0;
+  // padding-left: 0;
+                  // list-style: none;
+                  // counter-reset: li;
+                  // white-space: nowrap;
+
+                  // @media (min-width: 992px) {
+                  //   display: flex;
+    // justify-content: space-between;
+    display: flex;
+    gap: 32px;
+    @media (max-width: 1000px){
+      flex-direction: column;
     }
-  //section restaurants 
-  .restaurants {
+  }
+    & li{
+      position: relative;
+      &::before {
+        content: counter(steps);
+        counter-increment: steps;
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background-color: $color-primary;
+        position: absolute;
+        bottom: 16px;
+        left: -16px;
+      }
+      list-style-type: none;
+      background-color: #f6f6f6;
+      padding: 24px 32px;
+      flex-grow: 1;
+      border-radius: 16px;
+      box-shadow: 2px 1px 8px -3px #000000;
+      & hover {
+        transform: scale(1.02);
+  
+      }
+      i {
+        margin-right: 16px;
+        color: $color-grey;
+        font-size: 24px;
+      }
+    }
+  }
+
+                                          // p {
+                                          //   display: inline-block;
+                                          //   margin: auto;
+                                          //   min-width: 314px;
+                                          //   padding-top: 27px;
+                                          //   padding-bottom: 27px;
+                                          //   margin-top: 19px;
+                                          //   margin-bottom: 19px;
+                                          //   background-color: $color-grey3;
+                                          //   border-radius: 16px;
+                                          //   font-weight: bold;
+                                          //   font-size: 16px;
+                                          //   border-radius: map-get($radius, propal);
+                                          //   box-shadow: 8px 8px 10px $color-grey2, -1px -4px 4px $color-grey3;
+    // @media (min-width:992px) {
+    //     min-width: 320px;
+    // }
+
+                                                //     &:hover {
+                                                //       background-color: darken($color-grey3, 5%);
+                                                //       box-shadow: 8px 8px 6px $color-grey2, -1px -4px 2px $color-grey3;
+
+                                                //       i {
+                                                //         color: $color-primary;
+                                                //       }
+                                                //     }
+                                                //   }
+
+                                                //   li {
+                                                //     counter-increment: li;
+                                                //     cursor: pointer;
+                                                //     width: 80%;
+                                                //   }
+
+                                                //   i {
+                                                //     font-size: 19px;
+                                                //     padding-left: 30px;
+                                                //     padding-right: 20px;
+                                                //     color: $color-grey;
+                                                //   }
+
+                                                //   li::before {
+                                                //     content: counter(li);
+                                                //     position: relative;
+                                                //     left: 16px;
+                                                //     color: white;
+                                                //     font-size: 19px;
+                                                //     padding: 3px 10px;
+                                                //     background-color: $color-primary;
+                                                //     border-radius: 50%;
+                                                //   }
+                                                // }
+
+//section restaurants 
+.restaurants {
   background-color: #f6f6f6;
   padding: ($appPadding + 16px) $appPadding;
-}  
+}
 
-  .bloc {
+.bloc {
   width: 100%;
   margin: auto;
   position: relative;
-  }
+}
 
-  .cards {
+.cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   column-gap: 32px;
   row-gap: 32px;
 
-  @include desktop{
-            display:grid;
-            grid-template-columns: repeat(2,2fr);
-        }
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
   }
+}
 
-  .card {
+.card {
   background-color: white;
   border-radius: 16px;
   position: relative;
   text-decoration: none;
   color: inherit;
   display: block;
-  
+
 
   &__img {
     height: 180px;
@@ -137,46 +212,109 @@ body, html {
     box-shadow: none;
     object-fit: cover;
   }
+
   &__new {
     background-color: $color-tertiary;
     color: darken($color-tertiary, 50%);
     padding: 0.5rem;
-    border-radius: 0.125rem;
+    border-radius: 5px;
     position: absolute;
     top: 1rem;
     right: 0.75rem;
   }
-   &__body {
+
+  &__body {
     padding: 1rem;
     position: relative;
     display: flex;
     align-items: center;
   }
+
   &__name {
     flex: 1;
   }
-   & h3 {
+
+  & h3 {
     margin: 0;
     margin-bottom: 0.25rem;
   }
+
   &__subtitle {
     margin: 0;
- }
- &__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  background-color: transparent;
-  border: Opx solid transparent;
-  padding: 0;
- }
- &__like {
-  background-color: white;
- }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    background-color: initial;
+    border: Opx solid transparent;
+    padding: 0;
+  }
+
+  &__like {
+    background-color: white;
+  }
+
+  &__likes {
+    background-color: #f6f6f6;
+  }
 }
 
+// Elaboration du coeur
+.menus {
 
+  &__btn {
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: transparent 0px solid;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: black;
 
+    &:hover::before {
+      opacity: 1;
+    }
 
+    &::before {
+      opacity: 0;
+      transition: 0.5s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+    }
+  }
+
+  &__like {
+    transition-duration: .25s;
+
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    // height: 100%;
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+  }
+
+  &__btn:hover {
+    .menus__like {
+      &--notfull {
+        opacity: 0;
+      }
+    }
+  }
+}
