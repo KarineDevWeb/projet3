@@ -1,0 +1,20 @@
+// media queries :
+@mixin desktop {
+    @media all and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+@mixin tablet {
+    @media all and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+@mixin mobile-only{
+    @media all and (min-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+
+@mixin transform-zoom {
+    transform: scale(1.02);
+}
