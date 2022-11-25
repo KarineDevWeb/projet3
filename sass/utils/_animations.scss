@@ -59,7 +59,7 @@
     content: "";
     height: 100px;
     width: 100px;
-    border-radius: 6px solid transparent;
+    border-radius: 6px;
     border-top: 6px solid $color-primary;
     border-radius: 50%;
     animation: $animation-duration infinite spinner linear;
