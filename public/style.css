@@ -125,7 +125,7 @@ footer a {
   content: "";
   height: 100px;
   width: 100px;
-  border-radius: 6px solid transparent;
+  border-radius: 6px;
   border-top: 6px solid #9356dc;
   border-radius: 50%;
   animation: 2s infinite spinner linear;
@@ -243,13 +243,13 @@ article {
   animation: appear 1s;
 }
 .start__description:nth-child(1) {
-  animation-delay: 100ms both;
+  animation-delay: 100ms;
 }
 .start__description:nth-child(2) {
-  animation-delay: 200ms both;
+  animation-delay: 200ms;
 }
 .start__description:nth-child(3) {
-  animation-delay: 300ms both;
+  animation-delay: 300ms;
 }
 .start__description h3 {
   margin-top: 5px;
@@ -458,7 +458,7 @@ main {
   height: 32px;
   width: 32px;
   background-color: initial;
-  border: Opx solid transparent;
+  border: 0px;
   padding: 0;
 }
 .card__like {
