@@ -6,12 +6,13 @@ $color-grey2: lighten($color-grey, 65%);
 $color-grey3: lighten($color-grey, 75%);
 $appPadding: 16px;
 $radius: (
-  btn: 160px,
+btn: 160px,
 );
 
 // media queries :
 $breakpoints: (
   desktop: 992px,
-  tablet: 768px,
+  tablet: 767px,
+  mobile: 375px,
 );
 
