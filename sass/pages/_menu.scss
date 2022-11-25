@@ -1,6 +1,5 @@
-@use "./utils/_mixins.scss"
-
 // flèche et logo ohmyfood
+
 .header {
     &--withBackArrow {
         position: relative;
@@ -22,6 +21,7 @@
 }
 
 // image palette du goût
+
 .imgGood {
     max-width: 100%;
     max-height: 512px;
@@ -34,7 +34,7 @@
 .meals {
     display: grid;
 
-    @include _mixins.desktop {
+    @include desktop {
         column-gap: 16px;
         grid-template-columns: repeat(3, 1fr);
     }
@@ -46,8 +46,8 @@
 }
 
 // entrées soulignées
-.starters {
 
+.starters {
     margin-right: auto;
     width: 90%;
 
@@ -67,7 +67,8 @@
     }
 }
 
-// mise en page des différentes entrées, plats et desserts :
+// mise en page des différentes entrées, plats et desserts
+
 article {
     background-color: $color-grey3;
     width: 100%;
