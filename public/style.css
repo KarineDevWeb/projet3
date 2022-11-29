@@ -458,7 +458,7 @@ main {
   height: 32px;
   width: 32px;
   background-color: initial;
-  border: 0px;
+  border: Opx transparent;
   padding: 0;
 }
 .card__like {
