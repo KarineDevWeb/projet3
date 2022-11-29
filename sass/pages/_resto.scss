@@ -5,7 +5,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
   width: 100%;
 }
@@ -46,9 +46,9 @@ main {
     display: flex;
     gap: 32px;
     padding-left: 5px;
-    
+
     @media (max-width: 991px) {
-     flex-direction: column;
+      flex-direction: column;
     }
   }
 
@@ -67,7 +67,6 @@ main {
       position: absolute;
       bottom: 16px;
       left: -16px;
-
     }
 
     cursor: pointer;
@@ -96,7 +95,7 @@ main {
   }
 }
 
-//section restaurants 
+//section restaurants
 .restaurants {
   background-color: #f6f6f6;
   padding: ($appPadding + 16px) $appPadding;
@@ -127,7 +126,6 @@ main {
   text-decoration: none;
   color: inherit;
   display: block;
-
 
   &__img {
     height: 180px;
@@ -190,7 +188,6 @@ main {
 
 // Elaboration du coeur
 .menus {
-
   &__btn {
     height: 32px;
     width: 32px;
@@ -217,12 +214,16 @@ main {
       left: 0;
       height: 100%;
       width: 100%;
-      background: linear-gradient(0deg, $color-primary 0%, $color-secondary 100%);
+      background: linear-gradient(
+        0deg,
+        $color-primary 0%,
+        $color-secondary 100%
+      );
     }
   }
 
   &__like {
-    transition-duration: .25s;
+    transition-duration: 0.25s;
 
     position: absolute;
     display: flex;
