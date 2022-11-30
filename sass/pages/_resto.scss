@@ -42,6 +42,7 @@ main {
   justify-content: center;
   padding: 32px 16px;
   counter-reset: steps;
+
   & ol {
     display: flex;
     gap: 32px;
@@ -78,19 +79,19 @@ main {
     box-shadow: 2px 1px 8px -3px #000000;
 
     &:hover {
-      background-color: #eedaec;
+      background-color: #f3dff3;
       @include mixins.transform-zoom;
       box-shadow: 3px 5px 5px #cccccc;
+
+      & i.fas {
+        color: $color-primary;
+      }
     }
 
     & i.fas {
       margin-right: 16px;
       color: #7e7e7e;
       font-size: 24px;
-
-      &:hover {
-        color: $color-primary;
-      }
     }
   }
 }
@@ -189,10 +190,10 @@ main {
 // Elaboration du coeur
 .menus {
   &__btn {
-    height: 32px;
-    width: 32px;
+    height: 31px;
+    width: 31px;
     background-color: transparent;
-    border: transparent 0px solid;
+    border: transparent 0px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -214,11 +215,9 @@ main {
       left: 0;
       height: 100%;
       width: 100%;
-      background: linear-gradient(
-        0deg,
-        $color-primary 0%,
-        $color-secondary 100%
-      );
+      background: linear-gradient(0deg,
+          $color-primary 0%,
+          $color-secondary 100%);
     }
   }
 
